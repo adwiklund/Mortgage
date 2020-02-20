@@ -13,14 +13,16 @@ plugins {
     // Apply the application plugin to add support for building a CLI application.
     id 'application'
 	
-	id 'java-library'
-	id 'maven-publish'
+	//id 'java-library'
+	//id 'maven-publish'
 }
+
 
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+
 }
 
 dependencies {
@@ -36,20 +38,11 @@ application {
     mainClassName = 'Mortgage.App'
 }
 
-group = 'org.example'
-version = '1.0'
-
-publishing {
-    publications {
-        myLibrary(MavenPublication) {
-            from components.java
-        }
-    }
-
-    repositories {
-        maven {
-            name = 'myRepo'
-            url = "file://${buildDir}/repo"
-        }
-    }
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'Mortgage.App'
+		)
+	}
 }
+

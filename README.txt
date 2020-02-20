@@ -1,1 +1,0 @@
-To start simply open a terminal in ...\Mortgage\build\distributions\Mortgage-1.0\bin and run Mortgage.bat

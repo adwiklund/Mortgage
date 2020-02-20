@@ -29,7 +29,7 @@ public class Prospects {
             result *= monthlyInterest;
             --payments;
         }
-        
+
         return result;
     }
     
@@ -49,7 +49,7 @@ public class Prospects {
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(2);
         
-        return "Prospect " + count + ": " + customer + " wants to borrow " + loan + 
+        return "Prospect " + count + ": " + customer + " wants to borrow " + df.format(loan) + 
                 " € for a period of " + years + " years and pay " + df.format(getMonthlyPayment())
                 + " € each month";
     }

@@ -17,7 +17,7 @@ public class App {
 
         List<Prospects> prospectList = new ArrayList<>();
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prospects.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("src\\main\\java\\Mortgage\\prospects.txt"));
 
             String fileRead = br.readLine();
             fileRead = br.readLine();
@@ -32,7 +32,6 @@ public class App {
                 int years;
 
                 if(tokenCount < 4) {
-
                     break;
                 } 
                 try {
