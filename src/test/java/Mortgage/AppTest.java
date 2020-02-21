@@ -3,14 +3,21 @@
  */
 package Mortgage;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
     @Test public void testApp() {
         //App classUnderTest = new App();
+        List<Prospects> prospectList = new ArrayList<>();
         //assertNotNull("app should have a greeting", classUnderTest.getGreeting());
         Prospects prospectsTest = new Prospects("Test Namn", 10000, (float)5.32, 4);
+        prospectList.add(prospectsTest);
+        assertNotNull(prospectList);
+        assertEquals(prospectsTest, prospectList.get(0));
+        
         //assertEquals(0, prospectsTest.calculatePowerOf((float)5.32/12, 4*12));
 
         assertNotNull(prospectsTest.getMonthlyPayment());
